@@ -65,3 +65,40 @@
         --tamaño-fuente-muy-pequeña: .813rem;
     }
 }
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0 var(--altura-encabezado) 0;
+    font-family: var(--fuente-body);
+    font-size: var(--tamaño-fuente-normal);
+    background-color: var(--color-cuerpo);
+    color: var(--color-texto);
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-titulo);
+    font-weight: var(--fuente-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
