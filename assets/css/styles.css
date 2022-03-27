@@ -102,3 +102,35 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* CLASES CSS REUTILIZABLES */
+.seccion {
+    padding: 2rem 0 4rem;
+}
+
+.seccion__titulo {
+    font-size: var(--tamaño-fuente-h1);
+}
+
+.seccion__subtitulo {
+    font-size: var(--tamaño-fuente-pequeña);
+    display: block;
+    margin-bottom: var(--bm-3);
+}
+
+.seccion__titulo,
+.seccion__subtitulo {
+    text-align: center;
+}
+
+/* DISPOSICIÓN */
+.contenedor {
+    max-width: 768px;
+    margin-left: var(--bm-1-5);
+    margin-right: var(--bm-1-5);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
