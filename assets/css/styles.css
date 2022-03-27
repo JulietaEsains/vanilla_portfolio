@@ -1,4 +1,67 @@
-/* GOOGLE FONTS */
+/* FUENTES DE GOOGLE */
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
 
-/* CSS VARIABLES */
+/* VARIABLES CSS */
+:root {
+    --altura-encabezado: 3rem;
+
+    /* Colores */
+    --color-matiz: 168;
+
+    /* Modo de color HSL */
+    --color-primario: hsl(var(--color-matiz), 62%, 56%);
+    --color-secundario: hsl(var(--color-matiz), 62%, 56%);
+    --color-primario-alt: hsl(var(--color-matiz), 50%, 48%);
+    --color-primario-claro: hsl(var(--color-matiz), 85%, 70%);
+    --color-titulo: hsl(0, 0%, 15%);
+    --color-texto: hsl(0, 0%, 47%);
+    --color-texto-claro: hsl(0, 0%, 68%);
+    --color-input: hsl(0, 0%, 59%);
+    --color-cuerpo: hsl(var(--color-matiz), 53%, 99%);
+    --color-contenedor: hsl(0, 0%, 100%);
+
+    /* Fuente y tipografía */
+    --fuente-body: 'Jost', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px, ... */
+    --tamaño-fuente-grande: 2rem;
+    --tamaño-fuente-h1: 1.5rem;
+    --tamaño-fuente-h2: 1.25rem;
+    --tamaño-fuente-h3: 1.125rem;
+    --tamaño-fuente-normal: .938rem;
+    --tamaño-fuente-pequeña: .813rem;
+    --tamaño-fuente-muy-pequeña: .75rem;
+
+    /* Peso de la fuente */
+    --fuente-medium: 500;
+    --fuente-semi-bold: 600;
+
+    /* Bottom Margin */
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px, ...*/
+    --bm-0-25: .25rem;
+    --bm-0-5: .5rem;
+    --bm-0-75: .75rem;
+    --bm-1: 1rem;
+    --bm-1-5: 1.5rem;
+    --bm-2: 2rem;
+    --bm-2-5: 2.5rem;
+    --bm-3: 3rem;
+
+    /* Z index */
+    --z-tooltip: 10;
+    --z-fix: 100;
+    --z-modal: 1000;
+}
+
+/* Tamaño de fuente para dispositivos grandes */
+@media screen and (min-width: 968px) {
+    :root {
+        --tamaño-fuente-grande: 3rem;
+        --tamaño-fuente-h1: 2.25rem;
+        --tamaño-fuente-h2: 1.5rem;
+        --tamaño-fuente-h3: 1.25rem;
+        --tamaño-fuente-normal: 1rem;
+        --tamaño-fuente-pequeña: .875rem;
+        --tamaño-fuente-muy-pequeña: .813rem;
+    }
+}
