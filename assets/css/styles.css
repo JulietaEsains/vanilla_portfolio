@@ -293,6 +293,7 @@ img {
 }
 
 .inicio__descripcion {
+    text-align: justify;
     margin-bottom: var(--bm-2);
 }
 
@@ -347,4 +348,20 @@ img {
 .btn-flex {
     display: inline-flex;
     align-items: center;
+}
+
+/* ACERCA DE MÍ */
+.acercaDeMi__img {
+    justify-self: center;
+    align-self: center;
+}
+
+.acercaDeMi__descripcion {
+    text-align: justify;
+    margin-bottom: var(--bm-2-5);
+}
+
+.acercaDeMi__btn {
+    display: flex;
+    justify-content: center;
 }
