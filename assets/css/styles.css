@@ -146,6 +146,10 @@ img {
     margin-top: 0.5rem;
 }
 
+#logoArgentinaPrograma:hover {
+    filter: brightness(-50%);
+}
+
 .nav__logo {
     margin-left: -1rem;
 }
@@ -293,7 +297,7 @@ img {
 }
 
 .inicio__scroll {
-    /* display: none; */
+    display: none;
 }
 
 .inicio__scroll-btn {
@@ -318,4 +322,29 @@ img {
 
 .inicio__scroll-flecha {
     font-size: 1.25rem;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--fuente-medium);
+}
+
+.btn:hover {
+    background-color: var(--color-primario-alt);
+}
+
+.btn-icono {
+    font-size: 1.25rem;
+    margin-left: var(--bm-0-5);
+    transition: .3s;
+}
+
+.btn-flex {
+    display: inline-flex;
+    align-items: center;
 }
