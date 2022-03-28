@@ -24,7 +24,7 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
     const navMenu = document.getElementById('nav-menu');
-    // Cuando hacemos click en cada nav__link, quitamos la clase "mostrar-menu"
+    // Cuando hacemos click en cualquier nav__link, quitamos la clase "mostrar-menu"
     navMenu.classList.remove('mostrar-menu');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
