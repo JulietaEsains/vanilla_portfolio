@@ -146,18 +146,21 @@ img {
     margin-top: 0.5rem;
 }
 
-#logoArgentinaPrograma:hover {
-    filter: brightness(-50%);
-}
-
 .nav__logo {
     margin-left: -1rem;
 }
 
 #YoProgramo {
+    display: flex;
+    gap: .5rem;
     position: absolute;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+    margin-top: 0.25rem;
+    margin-left: 1.5rem;
+    transition: .15s;
+}
+
+#YoProgramo div {
+    text-align: center;
 }
 
 .header {
@@ -186,6 +189,7 @@ img {
 
 #YoProgramo:hover {
     color: var(--color-primario);
+    filter: drop-shadow(0 0 0.5rem var(--color-primario-claro));
 }
 
 .nav__cambiar {
