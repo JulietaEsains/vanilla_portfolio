@@ -12,7 +12,7 @@
     --color-primario: hsl(var(--color-matiz), 62%, 56%);
     --color-secundario: hsl(var(--color-matiz), 62%, 56%);
     --color-primario-alt: hsl(var(--color-matiz), 50%, 48%);
-    --color-primario-claro: hsl(var(--color-matiz), 85%, 70%);
+    --color-primario-claro: hsl(var(--color-matiz), 62%, 85%);
     --color-titulo: hsl(0, 0%, 15%);
     --color-texto: hsl(0, 0%, 47%);
     --color-texto-claro: hsl(0, 0%, 68%);
@@ -364,4 +364,109 @@ img {
 .acercaDeMi__btn {
     display: flex;
     justify-content: center;
+}
+
+/* HABILIDADES */
+.contenedor__habilidades {
+    row-gap: 0;
+}
+
+.cabecera__habilidades {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--bm-2-5);
+    cursor: pointer;
+}
+
+.habilidades__icon,
+.habilidades__flecha {
+    font-size: 2rem;
+    color: var(--color-primario);
+}
+
+.habilidades__icon {
+    margin-right: var(--bm-0-75);
+}
+
+.habilidades__titulo {
+    font-size: var(--tamaño-fuente-h3);
+}
+
+.habilidades__flecha {
+    margin-left: auto;
+    transition: .4s;
+}
+
+.lista__habilidades {
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
+.habilidades__titulos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--bm-0-5);
+}
+
+.habilidades__nombre {
+    font-size: var(--tamaño-fuente-normal);
+    font-weight: var(--fuente-medium);
+}
+
+.habilidades__barra,
+.habilidades__porcentaje {
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.habilidades__barra {
+    background-color: var(--color-primario-claro);
+}
+
+.habilidades__porcentaje {
+    display: block;
+    background-color: var(--color-primario);
+}
+
+.habilidades__html,
+.habilidades__uml,
+.habilidades__organizacion {
+    width: 90%;
+}
+
+.habilidades__css,
+.habilidades__java,
+.habilidades__manejoDelTiempo,
+.habilidades__ingles {
+    width: 80%;
+}
+
+.habilidades__js,
+.habilidades__mysql,
+.habilidades__resolucionDeProblemas {
+    width: 70%;
+}
+
+.habilidades__angular,
+.habilidades__springboot {
+    width: 50%;
+}
+
+.habilidades__trabajoEnEquipo,
+.habilidades__lunacy {
+    width: 60%;
+}
+
+.habilidades__cerrado .lista__habilidades {
+    height: 0;
+    overflow: hidden;
+}
+
+.habilidades__abierto .lista__habilidades {
+    height: max-content;
+    margin-bottom: var(--bm-2-5);
+}
+
+.habilidades__abierto .habilidades__flecha {
+    transform: rotate(-180deg);
 }
