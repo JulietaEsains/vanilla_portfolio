@@ -177,7 +177,7 @@ img {
     max-width: 968px;
     height: var(--altura-encabezado);
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 }
 
@@ -404,6 +404,7 @@ img {
 .lista__habilidades {
     row-gap: 1.5rem;
     padding-left: 2.7rem;
+    transition: .4s;
 }
 
 .habilidades__titulos {
