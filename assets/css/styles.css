@@ -475,3 +475,71 @@ img {
 .habilidades__abierto .habilidades__flecha {
     transform: rotate(-180deg);
 }
+
+/* HABILITACIÓN */
+.tabs__habilitacion {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--bm-2);
+}
+
+.btn__habilitacion {
+    font-size: var(--tamaño-fuente-h3);
+    font-weight: var(--fuente-medium);
+    cursor: pointer;
+}
+
+.habilitacion__icon {
+    font-size: 1.8rem;
+    margin-right: var(--bm-0-25);
+}
+
+.btn__habilitacion:hover {
+    color: var(--color-primario);
+}
+
+.habilitacion__datos {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.habilitacion__titulo {
+    font-size: var(--tamaño-fuente-normal);
+    font-weight: var(--fuente-medium);
+}
+
+.habilitacion__subtitulo {
+    display: inline-block;
+    font-size: var(--tamaño-fuente-pequeña);
+    margin-bottom: var(--bm-1);
+}
+
+.habilitacion__calendario {
+    font-size: var(--tamaño-fuente-muy-pequeña);
+    color: var(--color-texto);
+}
+
+.habilitacion__bolita {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+}
+
+.habilitacion__linea {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-primario);
+    transform: translate(6px, -7px);
+}
+
+.habilitacion [data-content] {
+    display: none;
+}
+
+.habilitacion__activo[data-content] {
+    display: block;
+}

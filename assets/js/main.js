@@ -44,3 +44,5 @@ function cambiarHabilidades() {
     }
 }
 cabeceraHabilidades.forEach((el) => el.addEventListener('click', cambiarHabilidades));
+
+/* TABS DE HABILITACIÓN */
