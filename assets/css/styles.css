@@ -16,7 +16,7 @@
     --color-titulo: hsl(0, 0%, 15%);
     --color-texto: hsl(0, 0%, 47%);
     --color-texto-claro: hsl(0, 0%, 68%);
-    --color-input: hsl(0, 0%, 59%);
+    --color-input: hsl(var(--color-matiz), 62%, 88%);
     --color-cuerpo: hsl(var(--color-matiz), 53%, 99%);
     --color-contenedor: hsl(0, 0%, 100%);
 
@@ -677,6 +677,58 @@ img {
 .swiper-button-next,
 .swiper-pagination-bullets {
     outline: none;
+}
+
+/* CONTACTO */
+.contenedor__contacto {
+    row-gap: 1rem;
+}
+
+.info__contacto {
+    display: flex;
+    margin-bottom: var(--bm-2);
+}
+
+.icono__contacto {
+    font-size: 2rem;
+    margin-right: var(--bm-0-75);
+    color: var(--color-primario);
+}
+
+.titulo__contacto {
+    font-size: var(--tamaño-fuente-h3);
+    font-weight: var(--fuente-medium);
+}
+
+.subtitulo__contacto {
+    font-size: var(--tamaño-fuente-pequeña);
+    color: var(--color-texto);
+}
+
+.contenido__contacto {
+    background-color: var(--color-input);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
+}
+
+.input__contacto {
+    width: 100%;
+    background-color: var(--color-input);
+    color: var(--color-texto);
+    font-family: var(--fuente-body);
+    font-size: var(--tamaño-fuente-normal);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
+}
+
+.label__contacto {
+    font-size: var(--tamaño-fuente-pequeña);
+    color: var(--color-titulo);
+}
+
+textarea {
+    resize: none;
 }
 
 @keyframes smooth {
