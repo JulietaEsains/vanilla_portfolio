@@ -8,6 +8,9 @@
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -399,7 +402,67 @@
                 </div>
             </div>
         </section>
+        <!-- PROYECTOS -->
+        <section class="seccion proyectos" id="proyectos">
+            <h2 class="seccion__titulo">Proyectos</h2>
+            <div class="contenedor__proyectos contenedor swiper MySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Proyecto 1 -->
+                    <div class="contenido__proyectos grid swiper-slide">
+                        <img src="/assets/img/project.png" alt="Julieta Esains Proyecto Portafolio" class="proyecto__img">
+                        <div class="proyecto__datos">
+                            <div class="proyecto__encabezado">
+                                <h3 class="proyecto__titulo">Mi portafolio</h3>
+                                <span class="proyecto__fecha">Feb. 2022 - Ago. 2022</span>
+                            </div>
+                            <p class="proyecto__descripcion">
+                                Página web que utilizo como carta de presentación y a modo de demostrar parte de lo que he aprendido. Rediseñé la interfaz de usuario basándome en una plantilla pública, realicé su implementación Front End con el framework Angular y la inclusión de funcionalidades Back End tales como la posibilidad de editar el contenido desde aquí mismo mediante un módulo de seguridad con usuario y contraseña y la manipulación de una base de datos.
+                            </p>
+                            <a href="index.html" target="_blank" class="btn btn-flex btn-small proyecto__btn">Visitar ></a>
+                        </div>
+                    </div>
+                    <!-- Proyecto 2 -->
+                    <div class="contenido__proyectos grid swiper-slide">
+                        <div class="proyecto__img__futuro">Próximamente</div>
+                        <div class="proyecto__datos">
+                            <div class="proyecto__encabezado">
+                                <h3 class="proyecto__titulo">Proyecto 2</h3>
+                                <span class="proyecto__fecha">En proceso</span>
+                            </div>
+                            <p class="proyecto__descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum a quidem cum aut, vitae accusantium voluptate accusamus ullam ut maiores facilis incidunt laboriosam ex eius qui perspiciatis voluptates consectetur animi.
+                            </p>
+                            <a href="#" class="btn btn-flex btn-small proyecto__btn">Visitar ></a>
+                        </div>
+                    </div>
+                    <!-- Proyecto 3 -->
+                    <div class="contenido__proyectos grid swiper-slide">
+                        <div class="proyecto__img__futuro">Próximamente</div>
+                        <div class="proyecto__datos">
+                            <div class="proyecto__encabezado">
+                                <h3 class="proyecto__titulo">Proyecto 3</h3>
+                                <span class="proyecto__fecha">En proceso</span>
+                            </div>
+                            <p class="proyecto__descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum a quidem cum aut, vitae accusantium voluptate accusamus ullam ut maiores facilis incidunt laboriosam ex eius qui perspiciatis voluptates consectetur animi.
+                            </p>
+                            <a href="#" class="btn btn-flex btn-small proyecto__btn">Visitar ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper__proyecto__icono"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper__proyecto__icono"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
     </main>
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>

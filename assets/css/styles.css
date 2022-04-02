@@ -354,6 +354,21 @@ img {
     align-items: center;
 }
 
+.btn-small {
+    padding: .75rem 1rem;
+}
+
+.btn-link {
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-primario);
+}
+
+.btn-link:hover {
+    background-color: transparent;
+    color: var(--color-primario-alt);
+}
+
 /* ACERCA DE MÍ */
 .acercaDeMi__img {
     justify-self: center;
@@ -582,6 +597,86 @@ img {
     background-image: url('/assets/img/argentinaProgramaLogo.png');
     filter: brightness(50%);
     background-size: cover;
+}
+
+/* PROYECTOS */
+.contenedor__proyectos {
+    overflow: initial;
+    margin-top: var(--bm-1-5);
+}
+
+.contenido__proyectos {
+    padding: 0 1.5rem;
+}
+
+.proyecto__img,
+.proyecto__img__futuro {
+    width: 265px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.proyecto__img__futuro {
+    display: flex;
+    height: 10rem;
+    background-color: #ddd;
+    color: #222;
+    font-size: var(--tamaño-fuente-h1);
+    justify-content: center;
+    align-items: center;
+}
+
+.proyecto__encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--bm-0-5);
+}
+
+.proyecto__titulo {
+    font-size: var(--tamaño-fuente-h3);
+}
+
+.proyecto__fecha {
+    font-size: var(--tamaño-fuente-pequeña);
+    font-weight: var(--fuente-medium);
+}
+
+.proyecto__descripcion {
+    text-align: justify;
+    margin-bottom: var(--bm-0-75);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+}
+
+.swiper__proyecto__icono {
+    font-size: 2rem;
+    color: var(--color-primario);
+}
+
+.swiper-button-prev {
+    left: -.5rem;
+}
+
+.swiper-button-next {
+    right: -.5rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+    bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-primario);
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets {
+    outline: none;
 }
 
 @keyframes smooth {
