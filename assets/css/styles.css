@@ -130,7 +130,7 @@ img {
 /* DISPOSICIÓN */
 .contenedor {
     max-width: 768px;
-    margin-left: var(--bm-1-5);
+    margin-left: var(--bm-2);
     margin-right: var(--bm-1-5);
 }
 
@@ -512,7 +512,7 @@ img {
 .habilitacion__subtitulo {
     display: inline-block;
     font-size: var(--tamaño-fuente-pequeña);
-    margin-bottom: var(--bm-1);
+    margin-bottom: var(--bm-0-5);
 }
 
 .habilitacion__calendario {
@@ -541,5 +541,54 @@ img {
 }
 
 .habilitacion__activo[data-content] {
+    animation: smooth .4s ease;
     display: block;
+}
+
+.btn__habilitacion.habilitacion__activo {
+    color: var(--color-primario);
+}
+
+.habilitacion__datos__relleno {
+    position: relative;
+    z-index: 2;
+}
+
+.habilitacion__datos__relleno::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .2;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.habilitacion__educacion__1::after {
+    background-image: url('/assets/img/dadLogo.jpg');
+}
+
+.habilitacion__educacion__3::after {
+    background-image: url('/assets/img/utnLogo.png');
+    background-size: auto;
+}
+
+.habilitacion__educacion__4::after {
+    background-image: url('/assets/img/argentinaProgramaLogo.png');
+    filter: brightness(50%);
+    background-size: cover;
+}
+
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -46,3 +46,19 @@ function cambiarHabilidades() {
 cabeceraHabilidades.forEach((el) => el.addEventListener('click', cambiarHabilidades));
 
 /* TABS DE HABILITACIÓN */
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContenidos = document.querySelectorAll('[data-content]');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target);
+        tabContenidos.forEach(tabContenido => {
+            tabContenido.classList.remove('habilitacion__activo');
+        })
+        target.classList.add('habilitacion__activo');
+        tabs.forEach(tab => {
+            tab.classList.remove('habilitacion__activo');
+        })
+        tab.classList.add('habilitacion__activo');
+    })
+})
