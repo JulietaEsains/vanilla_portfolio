@@ -19,6 +19,8 @@
     --color-input: hsl(var(--color-matiz), 62%, 88%);
     --color-cuerpo: hsl(var(--color-matiz), 53%, 99%);
     --color-contenedor: hsl(0, 0%, 100%);
+    --color-scroll-bar: hsl(var(--color-matiz), 12%, 90%);
+    --color-scroll-thumb: hsl(var(--color-matiz), 12%, 80%);
 
     /* Fuente y tipografía */
     --fuente-body: 'Jost', sans-serif;
@@ -66,6 +68,37 @@
     }
 }
 
+/* Variables tema oscuro */
+body.dark-theme{
+    /* Modo de color HSL */
+    --color-secundario: hsl(var(--color-matiz), 23%, 3%);
+    --color-primario-claro: hsl(var(--color-matiz), 62%, 30%);
+    --color-titulo: hsl(0, 0%, 95%);
+    --color-texto: hsl(0, 0%, 77%);
+    --color-input: hsl(var(--color-matiz), 21%, 8%);
+    --color-cuerpo: hsl(192, 45%, 4%);
+    --color-contenedor: hsl(var(--color-matiz), 29%, 16%);
+    --color-scroll-bar: hsl(var(--color-matiz), 12%, 48%);
+    --color-scroll-thumb: hsl(var(--color-matiz), 12%, 36%);
+}
+
+/* Botón dark/light */
+.nav__btns {
+    display: flex;
+    align-items: center;
+}
+
+.change-theme {
+    font-size: 1.25rem;
+    color: var(--color-titulo);
+    margin-right: var(--bm-1);
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--color-primario);
+}
+
 /* BASE */
 * {
     box-sizing: border-box;
@@ -83,6 +116,7 @@ body {
     font-size: var(--tamaño-fuente-normal);
     background-color: var(--color-cuerpo);
     color: var(--color-texto);
+    transition: .5s;
 }
 
 h1, h2, h3, h4 {
@@ -130,7 +164,7 @@ img {
 /* DISPOSICIÓN */
 .contenedor {
     max-width: 768px;
-    margin-left: var(--bm-2);
+    margin-left: var(--bm-1-5);
     margin-right: var(--bm-1-5);
 }
 
@@ -253,6 +287,16 @@ img {
 /* mostrar menú */
 .mostrar-menu {
     bottom: 0;
+}
+
+/* enlace activo */
+.enlace-activo {
+    color: var(--color-primario);
+}
+
+/* cambiar fondo encabezado */
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
 }
 
 /* INICIO */
@@ -769,6 +813,49 @@ textarea {
 .subtitulo__footer,
 .social__footer-icono {
     color: #fff;
+}
+
+/* scroll hasta arriba */
+.scroll-up {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--color-primario);
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .5s;
+}
+
+.scroll-up:hover {
+    background-color: var(--color-primario-alt);
+}
+
+.scroll-up-icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* mostrar scroll hasta arriba */
+.show-scroll {
+    bottom: 5rem;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--color-scroll-bar);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll-thumb);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-texto-claro);
 }
 
 @keyframes smooth {
