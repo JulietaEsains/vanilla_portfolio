@@ -104,6 +104,7 @@ body.dark-theme{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: .5s;
 }
 
 html {
@@ -116,7 +117,6 @@ body {
     font-size: var(--tamaño-fuente-normal);
     background-color: var(--color-cuerpo);
     color: var(--color-texto);
-    transition: .5s;
 }
 
 h1, h2, h3, h4 {
@@ -462,6 +462,7 @@ img {
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--bm-0-5);
+    align-items: end;
 }
 
 .habilidades__nombre {
@@ -681,7 +682,6 @@ img {
 
 .proyecto__descripcion {
     text-align: justify;
-    margin-bottom: var(--bm-0-75);
 }
 
 .swiper-button-prev::after,
@@ -745,7 +745,7 @@ img {
     padding: .75rem 1rem .25rem;
 }
 
-.input__contacto {
+.input {
     width: 100%;
     background-color: var(--color-input);
     color: var(--color-texto);
@@ -756,7 +756,12 @@ img {
     padding: .25rem .5rem .5rem 0;
 }
 
-.label__contacto {
+.input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.label {
     font-size: var(--tamaño-fuente-pequeña);
     color: var(--color-titulo);
 }
@@ -1056,6 +1061,11 @@ textarea {
 
     .contenido__proyectos {
         column-gap: 5rem;
+        margin-bottom: var(--bm-3);
+    }
+
+    .proyecto__img__futuro {
+        width: 100%;
     }
 
     .swiper__proyecto__icono {
@@ -1081,4 +1091,140 @@ textarea {
     .contenedor__footer {
         align-items: center;
     }
+
+    .contenedor__inicio {
+        row-gap: .5rem;
+    }
+}
+
+/* Login */
+.login {
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+
+.contenedor__login {
+    display: flex;
+    justify-content: end;
+}
+
+.inicio {
+    padding-top: 0;
+}
+
+.btn__login {
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.login__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.login__modal-contenido {
+    position: relative;
+    background-color: var(--color-contenedor);
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.login__modal-detalle {
+    row-gap: 1rem;
+}
+
+.login__modal-titulo {
+    font-size: var(--tamaño-fuente-h3);
+    font-weight: var(--fuente-medium);
+    margin-bottom: var(--bm-0-5);
+}
+
+.login__modal-cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    cursor: pointer;
+}
+
+#password {
+    font-family: sans-serif;
+}
+
+.btn__entrar {
+    margin: auto;
+    cursor: pointer;
+}
+
+/* Modal activo */
+.modal-activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modo edición */
+.editar,
+.agregar,
+.eliminar {
+    float: right;
+    color: #fff;
+    background-color: var(--color-primario);
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.editar:hover,
+.agregar:hover,
+.eliminar:hover {
+    background-color: var(--color-primario-alt);
+}
+
+.editar-habilidad,
+.editar-habilitacion,
+.editar-proyecto,
+.eliminar-habilidad,
+.eliminar-habilitacion,
+.eliminar-proyecto {
+    font-size: .75rem;
+}
+
+.habilidades__edicion,
+.habilitacion__edicion,
+.proyectos__edicion {
+    display: flex;
+    gap: .5rem;
+}
+
+.habilitacion__edicion__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyectos__edicion {
+    justify-content: end;
+}
+
+/* Mostrar modo edición */
+.modoEdicionActivado {
+    visibility: visible;
+    opacity: 1;
 }

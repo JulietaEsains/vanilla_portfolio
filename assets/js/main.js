@@ -145,3 +145,51 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// MODAL DE LOGIN
+const modalVista = document.querySelector('.login__modal'),
+      modalBtn = document.querySelector('.btn__login'),
+      modalCerrar = document.querySelector('.login__modal-cerrar')
+      btnEntrar = document.querySelector('.btn__entrar')
+      inputUsername = document.getElementById('username')
+      inputPassword = document.getElementById('password')
+
+// MODO EDICIÓN ACTIVADO
+function cambiarModoEdicion() {
+    const btnsEditar = document.querySelectorAll('.editar'),
+          btnsAgregar = document.querySelectorAll('.agregar'),
+          btnsEliminar = document.querySelectorAll('.eliminar')
+
+    inputUsername.value = ''
+    inputPassword.value = ''
+    modalVista.classList.remove('modal-activo')
+    
+    modalBtn.innerText = 'Cerrar sesión'
+    modalBtn.addEventListener('click', () => {
+        location.reload()
+    })
+
+    btnsEditar.forEach((btn) => {
+        btn.classList.add('modoEdicionActivado')
+    })
+    btnsAgregar.forEach((btn) => {
+        btn.classList.add('modoEdicionActivado')
+    })
+    btnsEliminar.forEach((btn) => {
+        btn.classList.add('modoEdicionActivado')
+    })
+}
+
+modalBtn.addEventListener('click', () => {
+    modalVista.classList.add('modal-activo')
+})
+
+modalCerrar.addEventListener('click', () => {
+    modalVista.classList.remove('modal-activo')
+})
+
+btnEntrar.addEventListener('click', () => {
+    if (inputUsername.value === 'admin' && inputPassword.value === '1234') {
+        cambiarModoEdicion()
+    }
+})
