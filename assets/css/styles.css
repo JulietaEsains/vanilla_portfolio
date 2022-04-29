@@ -204,7 +204,7 @@ img {
     max-width: 968px;
     height: var(--altura-encabezado);
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -254,6 +254,7 @@ img {
     font-size: var(--tamaño-fuente-pequeña);
     color: var(--color-titulo);
     font-weight: var(--fuente-medium);
+    transition: 0.000001s;
 }
 
 .nav__link:hover {
@@ -262,6 +263,7 @@ img {
 
 .nav__icon {
     font-size: 1.2rem;
+    transition: 0.000001s;
 }
 
 .nav__cerrar {
@@ -739,7 +741,8 @@ img {
     color: var(--color-texto);
 }
 
-.contenido__contacto {
+.contenido__contacto,
+.contenido__formulario__login {
     background-color: var(--color-input);
     border-radius: .5rem;
     padding: .75rem 1rem .25rem;
@@ -1027,6 +1030,7 @@ textarea {
     .contenido__proyectos {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
+        margin-bottom: var(--bm-3);
     }
 
     .proyecto__img,

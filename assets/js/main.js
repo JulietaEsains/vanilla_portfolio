@@ -171,12 +171,15 @@ function cambiarModoEdicion() {
 
     btnsEditar.forEach((btn) => {
         btn.classList.add('modoEdicionActivado')
+        btn.addEventListener('click', () => alert("Esta función se va a agregar próximamente"))
     })
     btnsAgregar.forEach((btn) => {
         btn.classList.add('modoEdicionActivado')
+        btn.addEventListener('click', () => alert("Esta función se va a agregar próximamente"))
     })
     btnsEliminar.forEach((btn) => {
         btn.classList.add('modoEdicionActivado')
+        btn.addEventListener('click', () => alert("Esta función se va a agregar próximamente"))
     })
 }
 
